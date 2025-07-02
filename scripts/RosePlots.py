@@ -139,30 +139,6 @@ def plot_windrose_subfigure(ax, bearings, distances, bins, title, y_limit):
     ax.text(x_position, y_ticks[-1] + 4, str(y_ticks[-1]),
            zorder=5, ha='left', va='bottom', color='#636363')
 
-def add_colorbar(cbar_ax, bins):
-    """Add colorbar to the figure."""
-    cmap = ListedColormap(plt.cm.viridis(np.linspace(0, 1, len(bins) - 1)))
-    norm = BoundaryNorm(bins, cmap.N)
-    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
-    sm.set_array([])  # Necessary for colorbar to work
-    
-    # Create and format colorbar
-    cbar = plt.colorbar(sm, cax=cbar_ax, ticks=bins, fraction=0.5, shrink=0.5)
-    cbar.set_label('Distance (km)', rotation=270, labelpad=20)
-
-
-def add_colorbar(cbar_ax, bins, width=0.5, height=0.5):
-    """Add colorbar to figure with adjustable relative dimensions.
-    """
-    sm = plt.cm.ScalarMappable(
-        cmap=ListedColormap(plt.cm.viridis(np.linspace(0, 1, len(bins)-1))),
-        norm=BoundaryNorm(bins, len(bins)-1)
-    )
-    sm.set_array([]) # Necessary for colorbar to work
-    
-    cbar = plt.colorbar(sm, cax=cbar_ax, ticks=bins, 
-                       fraction=width, shrink=height)
-    cbar.set_label('Distance (km)', rotation=270, labelpad=20)
 
 def add_colorbar(cbar_ax, bins, aspect=20):
     """Add colorbar to figure with adjustable relative dimensions.
