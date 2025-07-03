@@ -108,7 +108,7 @@ def plot_windrose_subplot(ax, bearings, distances, **kwargs):
   
   ax.set_title(kwargs.get('title',''))
 
-  #return ax
+  return ax
 
 def plot_windrose_subfigure(ax, bearings, distances, bins, title, y_limit):
     """Create a single windrose subplot with consistent styling."""
