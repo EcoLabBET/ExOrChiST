@@ -1,36 +1,25 @@
 # Analysis Scripts  
-**Companion scripts** for the manuscript *[Your Paper Title]*, implementing standard regression analyses using the [`[PackageName]`](https://github.com/yourlab/package-repo) framework.  
-
-### ⚠️ Dependencies  
-1. Install the core package first:  
-   ```bash
-   git clone https://github.com/yourlab/package-repo.git
-   cd package-repo
-   pip install -e .
-   ```
-2. Then clone this repository:  
-   ```bash
-   git clone https://github.com/ecolab-uoi/ExOrChiST.git
-   ```
+**Companion scripts** for the manuscript *[Your Paper Title]*, implementing the analyses presented in the manuscript using the [`RangeShifts`](https://github.com/EcoLabBET/RangeShifts.git) framework on a toy dataset.
 
 ### 🔄 Repo Structure  
-```  
-ExOrChiST/  
-├── scripts/          # Example input/output (if applicable)  
-├── results/       # Precomputed outputs (if included)  
-└── *.py           # Standalone scripts (depend on [PackageName])  
-```
+ExOrChiST/
+├── Toy_Dataset/ # Generated dataset of species occupancy at hectad level for Ireland
+├── scripts/ # Analysis scripts used in the paper
+├── Examples/ # Usage examples of the RangeShifts framework
 
 ### 📁 Scripts  
-- `script1.py`: Calculates [X] using [Method].  
-- `script2.py`: Generates [Y] plots from [Data].  
+- `ExOrChiST-OrchidTrends-DiversityMetrics.R`: Calculates diversity metrics presented in the paper
+- `ExOrChiST-OrchidTrends-TopCWE_boxplots.R`: Generates box plots for the CWE metric presented in the paper
+- `ExOrChiST-OrchidTrends-TopSR_violinplots.R`: Generates violin plots for the SR metric presented in the paper
+- `RosePlots.py`: Supporting scripts for Rose Plot visualizations (see /Examples/Measures-of-Centrality_Rose-Plots.ipynb)
+
+### 📁 Examples
+- `Trend_Analysis_with_pink-noise.ipynb`: Showcase of trend tables presented in the manuscript using the [`RangeShifts`](https://github.com/EcoLabBET/RangeShifts.git) framework
+- `Measures-of-Centrality_Rose-Plots.ipynb`: Showcase of using [`RangeShifts`](https://github.com/EcoLabBET/RangeShifts.git) to calculate centrality points and visualize them in Rose Plots
 
 ### 📜 Reference  
 If using these scripts, please cite:  
 > *[Paper Citation]*  
 
-
 ### Funding
-
-This research project was supported by the Hellenic Foundation for Research and Innovation (H.F.R.I.) under the “2nd Call for H.F.R.I. Research Projects to support Faculty Members & Researchers” (Project Number: 3972).
-
+This research was supported by the Hellenic Foundation for Research and Innovation (H.F.R.I.) under the "2nd Call for H.F.R.I. Research Projects to support Faculty Members & Researchers" (Project Number: 3972).
