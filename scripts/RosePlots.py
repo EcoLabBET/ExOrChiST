@@ -73,7 +73,7 @@ def calculate_max_y_axis_limit(df, columns):
     for column in columns:
         distances = df[f'{column}.dist']
         bearings = df[f'{column}.bear']
-        ax = Plot.plot_windrose_subplot(
+        ax = plot_windrose_subplot(
             ax=None, 
             bearings=bearings, 
             distances=distances, 
