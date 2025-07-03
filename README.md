@@ -2,10 +2,12 @@
 **Companion scripts** for the manuscript *[Your Paper Title]*, implementing the analyses presented in the manuscript using the [`RangeShifts`](https://github.com/EcoLabBET/RangeShifts.git) framework on a toy dataset.
 
 ### 🔄 Repo Structure  
-ExOrChiST/
-├── Toy_Dataset/ # Generated dataset of species occupancy at hectad level for Ireland
-├── scripts/ # Analysis scripts used in the paper
-├── Examples/ # Usage examples of the RangeShifts framework
+```
+ExOrChiST/  
+├── Toy_Dataset/    # Generated dataset of species occupancy at hectad level for Ireland  
+├── scripts/        # Analysis scripts used in the paper  
+├── Examples/       # Usage examples of the RangeShifts framework
+```
 
 ### 📁 Scripts  
 - `ExOrChiST-OrchidTrends-DiversityMetrics.R`: Calculates diversity metrics presented in the paper
